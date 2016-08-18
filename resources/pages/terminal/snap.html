@@ -1,0 +1,18 @@
+<div id="snap_box" class="modal-content" style=" width: 960px; height: 540px; margin: auto;">
+    <div class="modal-header" style=" background-color: rgba(255,255,255,.85); height: 46px">
+        <i class="fa fa-camera"></i>
+        <label>截屏</label>
+        <button id="term_snap_close" type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">×</span>
+        </button>
+    </div>
+    <div id="snap_info" class="modal-body text-center" style="top: 204px;">
+        <span class="fa fa-refresh fa-spin"></span> 截屏中...
+    </div>
+</div>
+
+<script>
+    seajs.use("pages/terminal/snap.js", function (term_snap) {
+        term_snap.init();
+    })
+</script>

@@ -1,0 +1,29 @@
+<div id="mtrUplLive_box" class="modal-content">
+    <div class="modal-header">
+        <button type="button" class="close CA_close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span></button>
+        <h4 id="mtr_alTitle" class="modal-title"></h4>
+    </div>
+    <div class="modal-body">
+        <div class="form-group">
+            <label>直播源名称：</label>
+            <input type="text" class="form-control" id="ULmtr_name" placeholder="请输入直播源名称">
+        </div>
+        <div class="form-group">
+            <label>直播源地址：</label>
+            <input type="text" class="form-control" id="ULmtr_address" placeholder="请输入直播源地址">
+            <small class="tips"><i class="fa fa-info-circle" >&nbsp例:http://tv.cctv.com/live/cctv1.m3u8</i></small>
+        </div>
+    </div>
+    <div class="modal-footer">
+
+        <button id="ULmtr_add" type="button" class="btn btn-primary pull-right">提交</button>
+    </div>
+</div>
+
+
+<script>
+    seajs.use("pages/materials/materials_addLive.js", function (materials_addLive) {
+        materials_addLive.init()
+    })
+</script>

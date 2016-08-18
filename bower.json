@@ -1,0 +1,21 @@
+{
+  "name": "ims3.0",
+  "description": "",
+  "main": "WEB-INF/views/index.jsp",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "Sortable": "^1.4.2",
+    "backbone": "^1.3.3",
+    "jquery.marquee": "jQuery.Marquee#^1.3.9",
+    "jquery-sticky": "^1.0.3",
+    "select2": "^4.0.2"
+  }
+}

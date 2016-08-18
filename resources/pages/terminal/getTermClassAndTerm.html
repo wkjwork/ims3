@@ -1,0 +1,56 @@
+<div class="modal-content" style="margin: auto; width: 800px; max-height: 560px;">
+    <div class="modal-header">
+        <button id="term_sel_cancel" type="button" class="btn btn-default pull-right">取消</button>
+        <button id="term_sel_save" type="button" class="btn btn-primary pull-right" style="margin-right: 10px;">保存</button>
+        <h4 id="term_sel_title" class="modal-title"></h4>
+    </div>
+    <div class="col-md-3" style="height:400px; overflow:auto; padding-left:0; padding-right:0;">
+        <div class="form-group">   
+            <ul id="select-termclass-tree" class="tree-menu">
+            </ul>
+        </div>
+    </div>
+    <div class="col-md-9" class="box box-primary"  style="padding-left:0; padding-right:0; height:400px; overflow:auto; border-left: 1px solid #f4f4f4">
+        <div class="box-header with-border">
+           <!-- Check all button -->
+           <button id="term－sel-list-select-all" type="button" class="btn btn-default btn-sm checkbox-toggle"><i class="fa fa-square-o"></i>
+           </button>
+          <h3 class="box-title">
+            <span id="select-termlist-title"> 全部</span>
+          </h3>
+
+          <div class="box-tools">
+            <div class="has-feedback">
+              <input id="term_sel_search" type="text" class="form-control input-sm" placeholder="搜索终端">
+              <span class="glyphicon glyphicon-search form-control-feedback"></span>
+            </div>
+          </div>
+          <!-- /.box-tools -->
+        </div>
+        <!-- /.box-header -->
+        <div class="box-body no-padding">
+          <div class="table-responsive mailbox-messages">
+            <table class="table table-hover table-striped">
+              <tbody id="term_sel_list">
+              </tbody>
+            </table>
+            <!-- /.table -->
+          </div>
+          <!-- /.mail-box-messages -->
+        </div>
+        <!-- /.box-body -->
+        <div class="box-footer no-padding">
+          <div class="mailbox-controls">
+            <div class="text-center">
+              <ul id="select-term-table-pager" class="pagination"></ul>
+            </div>
+            <!-- /.pull-right -->
+          </div>
+        </div>
+      </div>
+</div>
+<script>
+    seajs.use("pages/terminal/getTermClassAndTerm.js", function (classAndTerm) {
+        classAndTerm.init();
+    })
+</script>

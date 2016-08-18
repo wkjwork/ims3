@@ -1,0 +1,234 @@
+<div class="modal-content" style="position: relative; margin: auto; margin-left: -303px; width: 606px; left:50%; max-height: 560px;">
+    <div class="modal-header">
+        <button id="CO-close" type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+        </button>
+        <h4 id="CO-title" class="modal-title"></h4>
+    </div>
+    <div class="modal-body" style="height:400px; overflow:auto;">
+        <div class="form-group">   
+            <label style="color: #72afd2;">基本信息</label>
+        </div>
+        <form class="form-horizontal">
+            <div class="form-group">
+              <label class="col-sm-2 control-label">终端名称</label>
+              <div class="col-sm-10">
+                <input id="CO-term-name" type="text" class="form-control" placeholder="终端名称">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-2 control-label">当前频道</label>
+              <div class="col-sm-10">
+                <div class="checkbox">
+                    <label id="CO-channel" style="padding-left: 0;"></label>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-2 control-label">预下发频道</label>
+              <div class="col-sm-10">
+                <div class="checkbox">
+                    <label id="CO-preChannel" style="padding-left: 0;"></label>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-2 control-label">终端信息</label>
+              <div class="col-sm-10">
+                <div class="checkbox">
+                    <label id="CO-DiskInfo" style="padding-left: 0; cursor: default;"></label>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-2 control-label">CPU</label>
+              <div class="col-sm-10">
+                <div class="checkbox">
+                    <label id="CO-CPU" style="padding-left: 0; cursor: default;"></label>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-2 control-label">内存</label>
+              <div class="col-sm-10">
+                <div class="checkbox">
+                    <label id="CO-Mem" style="padding-left: 0; cursor: default;"></label>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-2 control-label">IP</label>
+              <div class="col-sm-10">
+                <div class="checkbox">
+                    <label id="CO-IP" style="padding-left: 0; cursor: default;"></label>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-2 control-label">MAC</label>
+              <div class="col-sm-10">
+                <div class="checkbox">
+                    <label id="CO-MAC" style="padding-left: 0; cursor: default;"></label>
+                </div>
+              </div>
+            </div>
+            <div id="CO-log-box" class="form-group">
+              <label class="col-sm-2 control-label">log</label>
+              <div class="col-sm-10">
+                <div class="checkbox">
+                    <button id="CO-log" type="button" class="btn btn-primary btn-xs pull-left">获取</button>
+                    &nbsp;&nbsp;<a id="CO-log-download">点我下载</a>
+                </div>
+              </div>
+            </div>
+        </form>   
+
+        <div class="form-group">   
+            <br>
+            <label style="color: #72afd2;">配置信息</label>
+        </div> 
+        <form class="form-horizontal">
+            <div class="form-group">
+              <label class="col-sm-2 control-label">升级服务器</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="CO-upgradeURL" placeholder="升级服务器地址">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-2 control-label">日志服务器</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="CO-logURL" placeholder="日志服务器地址">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-2 control-label">音量</label>
+              <div class="col-sm-8">
+                <input id="CO-vol-slider" type="text" value="" class="slider form-control" data-slider-id="green">
+              </div>
+              <div class="col-sm-2">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-2 control-label">城市</label>
+              <div class="col-sm-10">
+                <select id="CO-city" class="form-control select2" multiple="multiple" data-placeholder="请选择城市（终端将会显示所选城市的天气信息）" style="width: 100%;">
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-2 control-label">工作区间</label>
+              <div class="col-sm-10">
+                  <input id="CO-workSwitch" type="checkbox" checked>
+              </div>
+            </div>
+            <div class="form-group" id="CO-workWeekRepeatArea">
+              <div class="col-sm-offset-2 col-sm-10" id="CO-workWeekRepeat">
+                <div  class="checkbox">
+                    <label style="padding-left: 0; ">
+                        <input type="checkbox">
+                        周一
+                    </label> 
+                    <label style="padding-left: 0; ">
+                        <input type="checkbox">
+                        周二
+                    </label> 
+                    <label style="padding-left: 0; ">
+                        <input type="checkbox">
+                        周三
+                    </label> 
+                    <label style="padding-left: 0; ">
+                        <input type="checkbox">
+                        周四
+                    </label> 
+                    <label style="padding-left: 0; ">
+                        <input type="checkbox">
+                        周五
+                    </label> 
+                    <label style="padding-left: 0; ">
+                        <input type="checkbox">
+                        周六
+                    </label> 
+                    <label style="padding-left: 0; ">
+                        <input type="checkbox">
+                        周日
+                    </label>
+                </div>  
+              </div>
+            </div>
+            <div class="form-group" id="CO-workArea">
+              <div class="col-sm-offset-2 col-sm-10">
+                <div class="input-group" style="width: 150px; float: left;">
+                    <div class="input-group-addon">
+                        <i class="fa fa-clock-o"></i>
+                    </div>
+                    <input type="text" class="form-control" id="CO-workStart" style="display: inline-block; width: 120px;">
+                </div>  
+                <div style="float: left; width:30px; text-align: center; height: 34; line-height: 34px;">
+                    －
+                </div>
+                <div class="input-group" style="width: 150px; float: left;">
+                    <div class="input-group-addon">
+                        <i class="fa fa-clock-o"></i>
+                    </div>
+                    <input type="text" class="form-control" id="CO-workEnd" style="display: inline-block; width: 120px;">
+                </div>   
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-2 control-label">下载区间</label>
+              <div class="col-sm-10">
+                  <input id="CO-downloadSwitch" type="checkbox" checked>
+              </div>
+            </div>
+            <div class="form-group" id="CO-downloadArea">
+                <div class="col-sm-offset-2 col-sm-10">
+                <div class="input-group" style="width: 150px; float: left;">
+                    <div class="input-group-addon">
+                        <i class="fa fa-clock-o"></i>
+                    </div>
+                    <input type="text" class="form-control" id="CO-downloadStart" style="display: inline-block; width: 120px;">
+                </div>
+                <div style="float: left; width:30px; text-align: center; height: 34; line-height: 34px;">
+                    －
+                </div>
+                <div class="input-group" style="width: 150px; float: left;">
+                    <div class="input-group-addon">
+                        <i class="fa fa-clock-o"></i>
+                    </div>
+                    <input type="text" class="form-control" id="CO-downloadEnd" style="display: inline-block; width: 120px;">
+                </div> 
+                <div style="float: left; width:70px; text-align: center; height: 34; line-height: 34px;">
+                    （每天）
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-2 control-label">定时重启</label>
+              <div class="col-sm-10">
+                  <input id="CO-restartSwitch" type="checkbox" checked>
+              </div>
+            </div>
+            <div class="form-group" id="CO-restartArea">
+                <div class="col-sm-offset-2 col-sm-10">
+                <div class="input-group" style="width: 150px; float: left;">
+                    <div class="input-group-addon">
+                        <i class="fa fa-clock-o"></i>
+                    </div>
+                    <input type="text" class="form-control" id="CO-restartTime" style="display: inline-block; width: 120px;">
+                </div>
+                <div style="float: left; width:70px; text-align: center; height: 34; line-height: 34px;">
+                    （每天）
+                </div>
+              </div>
+            </div>
+        </form>    
+    </div>
+    <div class="modal-footer">
+        <button id="CO-save" type="button" class="btn btn-primary pull-right">保存</button>
+    </div>
+</div>
+<script>
+    seajs.use("pages/terminal/configOneTerm.js", function (configOne) {
+        configOne.init();
+    })
+</script>

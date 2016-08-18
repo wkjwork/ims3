@@ -1,0 +1,22 @@
+<div class="modal-content" style="position:relative; margin: auto; margin-left: -300px; width:600px; max-height: 560px; left:50%;">
+    <div class="modal-header">
+        <button id="single-term-class-close" type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+        </button>
+        <h4 id="sTermClass-title" class="modal-title"></h4>
+    </div>
+    <div class="modal-body" style="height:400px; overflow:auto;">
+        <div class="form-group">   
+            <ul id="single-termclass-tree" class="tree-menu">
+            </ul>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button id="single-term-class-save" type="button" class="btn btn-primary pull-right">保存</button>
+    </div>
+</div>
+<script>
+    seajs.use("pages/terminal/getSingleTermClass.js", function (sTermClass) {
+        sTermClass.init();
+    })
+</script>

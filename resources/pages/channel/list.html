@@ -1,0 +1,61 @@
+<section id="" class="content-header">
+	<h1>频道</h1>
+	<small class="tips" style="position: absolute; top:22px; right: 16px; font-size: 12px;"><i class="fa fa-info-circle"></i>&nbsp把频道发布到终端后，如果频道内容发生变化，终端的播放内容也会随之更改。</small>
+	
+</section>
+<section class="content" id="channel-list-nav">
+	<div class="box box-primary">
+		<!-- /.box-header -->
+		<div class="box-header with-border">
+			<h3 id="mtrLisTitle" class="box-title">频道列表</h3>
+
+			<div class="box-tools pull-right">
+                <div class="has-feedback">
+                    <input id="channelSearch" type="text"  class="form-control input-sm" placeholder="搜索频道" typeid="1">
+                    <span class="glyphicon glyphicon-search form-control-feedback" style=" pointer-events: auto; cursor: pointer;"></span>
+                </div>
+            </div>
+
+		</div>
+		<!-- /.box-controls -->
+		<div id="channel-list-controls" class="mailbox-controls">
+			<!-- Check all button -->
+			<button type="button" class="btn btn-default btn-sm checkbox-toggle select-all"><i class="fa fa-square-o"></i>
+			</button>
+			<div class="btn-group">
+				<button type="button" class="btn btn-default btn-sm btn-publish">发布</button>
+				<button type="button" class="btn btn-default btn-sm btn-publish-later">预发布</button>
+				<button type="button" class="btn btn-default btn-sm btn-delete">删除</button>
+			</div>
+            <div class="btn-group">
+				<button type="button" class="btn btn-default btn-sm" id="chn_submit">提交审核</button>
+				<button type="button" class="btn btn-default btn-sm" id="chn_pass">审核通过</button>
+				<button type="button" class="btn btn-default btn-sm" id="chn_unpass">审核不通过</button>
+			</div>
+           
+            <div id="chn_toBeCheckedDiv" class="btn-group pull-right">
+                <button type="button" class="btn btn-default btn-sm" value="1">待审核</button>
+                <button type="button" class="btn btn-default btn-sm" value="0">待提交</button>
+                <button type="button" class="btn btn-default btn-sm" value="2">已通过</button>
+                <button type="button" class="btn btn-default btn-sm" value="3">未通过</button>
+            </div>
+			<a href="#channel/edit" class="btn btn-primary btn-sm btn-add-channel">添加频道</a>
+		</div>
+		<div class="table-responsive  mailbox-messages">
+			<table id="channel-table" class="table table-hover table-striped">
+				<tbody>
+				</tbody>
+			</table>
+		</div>
+
+    <div class="box-footer no-padding text-center">
+			<ul id="channel-table-pager" class="pagination">
+			</ul>
+    </div>
+	</div>
+</section>
+<script>
+	seajs.use('pages/channel/list', function(channelList) {
+		channelList.init();
+	});
+</script>

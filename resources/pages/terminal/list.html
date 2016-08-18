@@ -1,0 +1,98 @@
+<!-- Content Header (Page header) -->
+<section class="content-header">
+  <h1>
+    终端
+  </h1>
+</section>
+
+<!-- Main content -->
+<section class="content">
+  <div class="row">
+    <div class="col-md-3" style="">
+      <!-- <div class="box box-solid sidebar"> -->
+      <div class="box box-primary tree-box" style="">
+        <div class="box-header with-border">
+          <h3 class="box-title" style="position: relative; top: 2px;">终端分类</h3>
+          <div class="tools">
+            <a id="tct_edit" class="btn btn-default btn-xs" title="编辑"><i class="glyphicon glyphicon-edit" style="font-size:12px;"></i></a>
+            <a id="tct_delete" class="btn btn-default btn-xs" title="删除"><i class="glyphicon glyphicon-trash" style="font-size:12px;"></i></a>
+            <a id="tct_add" class="btn btn-default btn-xs" title="添加"><i class="glyphicon glyphicon-plus" style="font-size:12px;"></i></a>
+          </div>
+        </div>
+        <ul id="termclass-tree" class="tree-menu">
+        </ul>
+        <!-- /.box-body -->
+      </div>
+    </div>
+    <!-- /.col -->
+    <div class="col-md-9" style="min-width: 629px; padding-left: 0">
+      <div class="box box-primary">
+        <div class="box-header with-border">
+          <h3 class="box-title" style="position: relative; top: 3px;">
+            <span id="termlist-title"></span>
+            <small id="term_status" style="padding-left: 15px;"></small>
+            <small><button id="tct_config" type="button" class="btn btn-default btn-xs" style="position: relative; top: -3px;" title="批量配置该分类终端"><i class="fa fa-gear"></i></button></small>
+          </h3>
+
+          <div class="box-tools">
+            <div class="has-feedback">
+              <input id="term_search" type="text" class="form-control input-sm" placeholder="搜索终端">
+              <span class="glyphicon glyphicon-search form-control-feedback"></span>
+            </div>
+          </div>
+          <!-- /.box-tools -->
+        </div>
+        <!-- /.box-header -->
+        <div class="box-body no-padding">
+          <div class="mailbox-controls">
+            <!-- Check all button -->
+            <button id="term-list-select-all" type="button" class="btn btn-default btn-sm checkbox-toggle"><i class="fa fa-square-o"></i>
+            </button>
+            <div class="btn-group">
+              <button id="term_batch_move" type="button" class="btn btn-default btn-sm">移动到...</button>
+              <button id="term_batch_delete" type="button" class="btn btn-default btn-sm">删除</button>
+              <button id="term_batch_start" type="button" class="btn btn-default btn-sm">唤醒</button>
+              <button  id="term_batch_stop" type="button" class="btn btn-default btn-sm">休眠</button>
+            </div>
+
+            <button id="term_refresh" type="button" class="btn btn-default btn-sm"><i class="fa fa-refresh"></i></button>  
+            <div id="term-status" class="btn-group pull-right">
+              <button type="button" class="btn btn-default btn-sm" value="running">运行（<span id="term_running"></span>）</button>
+              <button type="button" class="btn btn-default btn-sm" value="shutdown">休眠（<span id="term_shutdown"></span>）</button>
+              <button type="button" class="btn btn-default btn-sm" value="offline">离线（<span id="term_offline"></span>）</button>
+            </div>
+          </div>
+          <div class="mailbox-messages">
+            <table class="table table-hover table-striped">
+              <tbody id="term_list">
+              </tbody>
+            </table>
+            <!-- /.table -->
+          </div>
+          <!-- /.mail-box-messages -->
+        </div>
+        <!-- /.box-body -->
+        <div class="box-footer no-padding">
+          <div class="mailbox-controls">
+            <div class="text-center">
+              <ul id="term-table-pager" class="pagination"></ul>
+            </div>
+            <!-- /.pull-right -->
+          </div>
+        </div>
+      </div>
+      <!-- /. box -->
+    </div>
+    <!-- /.col -->
+  </div>
+  <!-- /.row -->
+</section>
+<!-- icheck -->
+<link rel="stylesheet" href="resources/plugins/iCheck/all.css"/>
+<link rel="stylesheet" href="resources/css/pages/channel/list.css"/>
+<script src="resources/plugins/iCheck/icheck.min.js"></script>
+<!-- icheck -->
+<script src="resources/plugins/jqPaginator/jqPaginator.min.js"></script>
+<script>
+  seajs.use("pages/terminal/list.js" , function(termList){ termList.init() })
+</script>

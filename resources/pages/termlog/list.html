@@ -1,0 +1,60 @@
+<!-- Content Header (Page header) -->
+<section class="content-header">
+    <h1>
+        日志
+        <small></small>
+    </h1>
+    <small class="tips" style="position: absolute; top:22px; right: 16px; font-size: 12px;"><i class="fa fa-info-circle"></i>&nbsp;终端MAC信息可以在 控制台->终端 里找到。</small>
+</section>
+
+<!-- Main content -->
+<section class="content">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="box box-primary">
+                <div class="box-header with-border">
+                    <h3 id="termlogLisTitle" class="box-title"></h3>   
+                    
+                    <div class="box-tools pull-right">
+                        <div class="has-feedback">
+                            <input id="termlogSearch" type="text" class="form-control input-sm" placeholder="终端mac搜索">
+                            <span class="glyphicon glyphicon-search form-control-feedback"></span>
+                        </div>
+                    </div>                 
+                    <!-- /.box-tools -->
+                </div>
+                <!-- /.box-header -->
+                <div class="box-body no-padding">
+                    <div class="table-responsive mailbox-messages">
+                        <!-- 用户列表 -->
+                        <table id="termlogTable" class="table table-hover table-striped">
+                            <tbody>
+
+                            </tbody>
+                        </table>
+                        <!-- /.table -->
+                    </div>
+                    <!-- /.mail-box-messages -->
+                </div>
+                <!-- /.box-body -->
+                <div class="box-footer no-padding text-center">
+                    <!-- 翻页 -->
+                    <ul id="termlog-table-pager" class="pagination">
+                    </ul>
+                </div>
+            </div>
+            <!-- /. box -->
+        </div>
+        <!-- /.col -->
+    </div>
+    <!-- /.row -->
+
+    <!-- upload按钮-->
+    <input id="file" name="file" type="file" multiple="multiple" accept="image/*, audio/*, video/*"/>
+</section>
+<!-- /.content -->
+<script>
+    seajs.use("pages/termlog/list.js", function (termlogList) {
+        termlogList.init()
+    })
+</script>

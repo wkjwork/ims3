@@ -1,0 +1,65 @@
+<!-- Content Header (Page header) -->
+<section class="content-header">
+    <h1>
+                功能模块列表
+        <small>Function Module List</small>
+    </h1>
+</section>
+
+<!-- Main content -->
+<section class="content">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="box box-primary">
+                <div class="box-header with-border">
+                    <h3 id="funcModuleLisTitle" class="box-title"></h3>   
+                              
+                    <!-- /.box-tools -->
+                </div>
+                <!-- /.box-header -->
+                <div class="box-body no-padding">
+                    <div class="mailbox-controls">
+                        
+                        <div class="btn-group">
+                            <button id="funcmodule_add" type="button" class="btn btn-default btn-sm">添加</button>   
+                       		<!-- <button id="user_add" type="button" class="btn btn-default btn-sm">添加</button>-->
+                        </div>
+                        <!-- /.btn-group -->
+
+                        <div class="pull-right">
+                        </div>
+                        <!-- /.pull-right -->
+                    </div>
+                    <div class="table-responsive mailbox-messages">
+                        <!-- 用户列表 -->
+                        <table id="funcModuleTable" class="table table-hover table-striped">
+                            <tbody>
+
+                            </tbody>
+                        </table>
+                        <!-- /.table -->
+                    </div>
+                    <!-- /.mail-box-messages -->
+                </div>
+                <!-- /.box-body -->
+                <div class="box-footer no-padding text-center">
+                    <!-- 翻页 -->
+                    <ul id="funcModule-table-pager" class="pagination">
+                    </ul>
+                </div>
+            </div>
+            <!-- /. box -->
+        </div>
+        <!-- /.col -->
+    </div>
+    <!-- /.row -->
+
+    <!-- upload按钮-->
+    <input id="file" name="file" type="file" multiple="multiple" accept="image/*, audio/*, video/*"/>
+</section>
+<!-- /.content -->
+<script>
+    seajs.use("pages/funcmodule/list.js", function (funcmoduleList) {
+    	funcmoduleList.init()
+    })
+</script>

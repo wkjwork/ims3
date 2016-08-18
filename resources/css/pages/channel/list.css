@@ -1,0 +1,12 @@
+#channel-table-pager > .page > a {
+    max-width: 33px;
+}
+#channel-list-controls {
+   
+}
+.content-header .search-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 16px;
+}

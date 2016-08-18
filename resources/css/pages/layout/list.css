@@ -1,0 +1,17 @@
+#layout-list-pager>.page>a {
+    max-width: 33px;
+}
+
+#layout-list-controls {
+    height: 34px;
+}
+
+.content-header .search-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 16px;
+}
+.mod_size_center,.mod_user_center,.mod_create_time_center{
+    text-align: center;
+}

@@ -1,0 +1,223 @@
+
+
+
+
+#layout-editor-wrapper {
+    margin-left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;    
+}
+
+
+#layout-editor-wrapper .layout-editor-header {
+    height: 50px;
+    background: #3c8dbc;
+}
+
+#layout-editor-wrapper .btn-complete-layout {
+}
+
+#layout-editor-wrapper .btn-save-layout {
+}
+
+#layout-editor-wrapper .layout-editor-body {
+    height: calc(100% - 80px);
+    position: relative;
+    width: 100%;
+    padding-left: 30px;
+    padding-top: 15px;
+    padding-right: 30px;
+}
+
+/*#layout-editor-wrapper .layout-editor-toolbar {
+    position: absolute;
+    width: 220px;
+    height: 100%;
+}*/
+
+.layout-editor-toolbar{
+    padding-top: 15px;
+    padding-left: 15px;
+    width: 120px;
+    display: inline;
+    float: left;
+}
+
+#layout-editor-wrapper .layout-editor-toolbar ul {
+    list-style: none;
+    padding-left: 0;
+}
+#layout-editor-wrapper .layout-editor-toolbar li {
+    list-style: none;
+}
+
+#layout-editor-wrapper .layout-editor-toolbar li>label {
+    width: 70px;
+    text-align: right;
+}
+
+#layout-editor-wrapper .layout-editor-toolbar li>input {
+    width: 126px;
+}
+
+#layout-editor-wrapper .layout-editor-toolbar li {
+    text-align: center;
+}
+
+#layout-editor-wrapper .layout-editor-toolbar li>button {
+    width: 100px;
+}
+
+#layout-editor-wrapper .layout-editor-canvas-title {
+    position: absolute;
+    top: 25px;
+    bottom: 80px;
+    left: 120px;
+    right: 280px;
+}
+
+#layout-editor-wrapper .layout-editor-canvas {
+    position: absolute;
+    top: 70px;
+    bottom: 50px;
+    left: 120px;
+    right: 280px;
+    border: 1px solid #ddd;
+    overflow: hidden;
+    border-radius: 4px;
+    background: #f4f4f4 url(../../../img/img_grid.png);
+}
+
+#layout-editor-wrapper .layout-editor-widget {
+    padding-top: 15px;
+    display: inline;
+    float: right;
+    width: 245px;
+    height: calc(100% - 40px);
+    padding-right: 15px;
+}
+
+#layout-editor-wrapper .layout-editor-widget ul {
+    list-style: none;
+    padding-left: 0;
+}
+#layout-editor-wrapper .layout-editor-widget li {
+    list-style: none;
+}
+
+#layout-editor-wrapper .layout-editor-widget li>label {
+    width: 70px;
+    text-align: right;
+}
+
+#layout-editor-wrapper .layout-editor-widget li>input,
+#layout-editor-wrapper .layout-editor-widget li>select
+{
+    width: 126px;
+}
+
+#layout-editor-wrapper .layout-editor-widgets {
+    width: 100%;
+    height: calc(100% - 160px);
+    overflow-y: auto;
+}
+
+#layout-editor-wrapper .layout-editor-widgets ul {
+    list-style: none;
+    display: table;
+    width: 100%;
+}
+
+#layout-editor-wrapper .layout-editor-widgets li {
+    width: 200px;
+    margin-left: 15px;
+    height: 32px;
+    border-radius: 4px;
+    text-indent: 32px;
+    line-height: 32px;
+    border: solid 1px #ddd;
+    margin-bottom: 7px;
+    position: relative;
+    cursor: pointer;
+    transition-duration: 0.3s;
+    top: 1px;
+}
+
+
+#layout-editor-wrapper .layout-editor-widgets li:hover{
+    background:#e7e7e7;
+    margin-left: 5px;
+}
+
+
+
+.layout-editor-properties{
+    position: absolute;
+    padding: 0;
+    left: 0;
+    right: 280px;
+    z-index: 1;
+
+}
+
+.layout-editor-property{
+    float: left !important;
+    top: 32px;
+    left: 200px;
+}
+
+.property-name-inline{
+    padding-right: 0;
+    line-height: 34px;
+}
+
+
+.wiget-mark{
+    position: absolute;
+    left: 7px;
+    top: 7px;
+    width: 18px;
+    height: 18px;
+    border-radius: 3px;
+    border: solid 1px #ddd;
+}
+
+#layout-editor-wrapper .layout-editor-widgets .focused{
+    margin-left: 5px;
+    border: solid 1px #3c8dbc;
+}
+
+.btn-layout-editor-save{
+    display: inline;
+    float: right;
+    width: 5rem;
+    margin-right: 15px;
+}
+
+.btn-layout-editor-saveExit{
+    display: inline;
+    float: right;
+    margin-right: 15px;
+}
+
+.btn-layout-editor-exit{
+    display: inline;
+    float: right;
+    overflow: hidden;
+    width: 7rem;font-family: "Helvetica Neue", Helvetica, Arial, '等线','微软雅黑','黑体',sans-serif !important;
+}
+
+.layout-edit-propoties-name{
+    border: none;
+    /*background: red;*/
+    width:540px;
+}
+
+.layout-edit-propoties-name:focus{
+    border: 1px solid #ccc !important;
+}
+
+.layout-preview-text {
+    font-size: 40px;
+}

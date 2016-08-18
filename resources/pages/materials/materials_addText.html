@@ -1,0 +1,37 @@
+<div id="box_list" class="box box-primary">
+    <div class="box-header with-border">
+        <h3 id="mtr_atTitle" class="box-title"></h3>
+    </div>
+    <!-- /.box-header -->
+    <div class="box-body pad">
+    	<div class="form-group">
+            <label>文本资源名称：</label>
+            <input type="text" class="form-control" id="Tmtr_name" placeholder="请输入文本资源名称">
+        </div>
+        <form>
+            <textarea id="editor1" name="editor1" rows="10" cols="80">
+            
+            </textarea>
+        </form>
+    </div>
+    <!-- /.box-body -->
+    <div class="box-footer">
+        <div class="pull-left">
+            <button id="Tmtr_viewlast" type="button" class="btn btn-default">查看已通过审核的内容</button>
+        </div>
+        <div class="pull-right">
+            <button id="Tmtr_submit" type="submit" class="btn btn-primary">保存并提交</button>
+            <button id="Tmtr_save" type="submit" class="btn btn-primary">保存</button>
+            <button id="Tmtr_back" type="button" class="btn btn-default">退出</button>
+        </div>
+    </div>
+    <!-- /.box-footer -->
+</div>
+<!-- CK Editor -->
+<script src="resources/plugins/ckeditor/ckeditor.js"></script>
+
+<script>
+    seajs.use("pages/materials/materials_addText.js", function (materials_addText) {
+        materials_addText.init()
+    })
+</script>

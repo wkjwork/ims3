@@ -1,0 +1,70 @@
+
+#channel-editor-timer {
+    position: relative;
+    left: 50%;
+    margin: auto;
+    margin-left: -300px;
+    width: 600px;
+}
+
+#channel-editor-timer .modal-body {
+    
+    overflow-y: auto;
+}
+
+#channel-editor-timer .granularity-month .month-selector,
+#channel-editor-timer .granularity-month .date-selector {
+    display: block;
+}
+
+#channel-editor-timer .granularity-month .day-selector {
+    display: none;
+}
+
+#channel-editor-timer .granularity-date .date-selector {
+    display: block;
+}
+#channel-editor-timer .granularity-date .month-selector,
+#channel-editor-timer .granularity-date .day-selector {
+    display: none;
+}
+
+#channel-editor-timer .granularity-day .day-selector {
+    display: block;
+}
+#channel-editor-timer .granularity-day .month-selector,
+#channel-editor-timer .granularity-day .date-selector {
+    display: none;
+}
+
+#channel-editor-timer .granularity-everyday .month-selector,
+#channel-editor-timer .granularity-everyday .day-selector,
+#channel-editor-timer .granularity-everyday .date-selector {
+    display: none;
+}
+
+#channel-editor-timer .granularity-everyday button[data-selector="everyday"],
+#channel-editor-timer .granularity-day button[data-selector="day"],#channel-editor-timer .granularity-day button[data-selector="everyday"],
+#channel-editor-timer .granularity-date button[data-selector="date"],#channel-editor-timer .granularity-date button[data-selector="everyday"],
+#channel-editor-timer .granularity-month button[data-selector="month"],#channel-editor-timer .granularity-month button[data-selector="date"],#channel-editor-timer .granularity-month button[data-selector="everyday"]{
+    background: #3c8dbc !important;
+    color: white;
+
+}
+
+#channel-editor-timer .granularity-selector,
+#channel-editor-timer .month-selector ul,
+#channel-editor-timer .date-selector ul,
+#channel-editor-timer .day-selector ul {
+    /*overflow-x: auto;*/
+    /*white-space: nowrap;*/
+    padding: 10px 0;
+}
+
+#channel-editor-timer .granularity-selector li,
+#channel-editor-timer .month-selector li,
+#channel-editor-timer .date-selector li,
+#channel-editor-timer .day-selector li {
+    list-style: none;
+    display: inline-block;
+}

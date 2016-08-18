@@ -1,0 +1,244 @@
+<!-- general form elements -->
+<div class="" style="height: 100%;" xmlns="http://www.w3.org/1999/html">
+    <div class="box-header with-border" style="height: 54px;">
+        <i class="wiget-mark" style="margin-top: 11px;"></i>
+        <label id="mtrCtrl_Title"  style="position: relative; left: 20px; top: 6px;">视频控件</label>
+        <div id="widget_attribute" class="pull-right"></div>
+    </div>
+    <!-- /.box-header -->
+    <!-- form start -->
+    <form role="form" style="height: 90%;">
+        <div id="box_effect" class="box-header with-border">
+            <div class="btn-group mtrCtrl_select">
+                <select id="mtrC_textType" class="form-control select2 "
+                        style="width: 100%; height: 30px; padding: 0px 10px;">
+                    <option selected="selected" value="Normal">常规</option>
+                    <option value="Marquee">走马灯</option>
+                </select>
+            </div>
+            <div id="mtrC_flip" class="pull-right">
+                <div id="box_text_time" class="input-group">
+                    <span class="input-group-addon">翻页间隔</span>
+                    <input id="mtrC_pageDownPeriod" type="number" class="form-control" min="0" placeholder="请输入">
+                    <span class="input-group-addon">秒</span>
+                </div>
+            </div>
+            <div id="mtrC_effect" class="pull-right">
+                <div class="btn-group">
+                    <div id="box_text_color" class="input-group my-colorpicker2">
+                        <input id="text_color" type="text" class="form-control"  placeholder="颜色">
+                    </div>
+                </div>
+                <div class="btn-group mtrCtrl_select">
+                    <select id="mtrC_scrollDirection" class="form-control select2 ">
+                        <option selected="selected" value="Right_2_Left">从右到左</option>
+                    </select>
+                </div>
+                <div class="btn-group mtrCtrl_select">
+                    <select id="mtrC_scrollSpeed" class="form-control select2 " style="width: 100%; height: 30px; padding: 0px 10px;">
+                        <option selected="selected" value=0>静止</option>
+                        <option value=1>1</option>
+                        <option value=2>2</option>
+                        <option value=3>3</option>
+                        <option value=4>4</option>
+                        <option value=5>5</option>
+                        <option value=6>6</option>
+                        <option value=7>7</option>
+                        <option value=8>8</option>
+                        <option value=9>9</option>
+                        <option value=10>10</option>
+                    </select>
+                </div>
+            </div>
+            <div id="mtrC_bgFlip" class="btn-group">
+                <!--<div id="box_text_bgcolor" class="input-group">-->
+                    <!--<input id="text_bgcolor" type="text" class="form-control"  placeholder="颜色">-->
+                <!--</div>-->
+                <div id="box_text_bgcolor" class="input-group">
+                    <label class="col-sm-2 control-label">背景颜色：</label>
+                    <div class="col-sm-10"><input id="text_bgcolor" type="text" class="form-control" placeholder="请选择背景颜色"></div>
+                </div>
+            </div>
+
+        </div>
+        <!-- 时间控件属性 -->
+        <div id="box_datetimeEffect" class="box-header with-border">
+            <div class="input-group my-colorpicker2" style="width: 100%;">
+                <label class="col-sm-2 control-label">字体颜色：</label>
+                <div class="col-sm-10"><input id="clockText_color" type="text" class="form-control"  placeholder="请选择时钟字体颜色"></div>
+            </div>
+        </div>
+        <!-- 天气控件属性 -->
+        <div id="box_weatherEffect" class="box-header with-border">
+            <div class="btn-group" style="width: 100%;">
+                <div  id="box_weather_color" class="input-group pull-left">
+                    <label class="col-sm-3 control-label">字体颜色:</label>
+                    <div class="col-sm-9"><input id="weatherText_color" type="text" class="form-control"  placeholder="请选择天气字体颜色"></div>
+                </div>
+                <div id="box_weather_time" class="input-group pull-right">
+                    <span class="input-group-addon">切换间隔</span>
+                    <input id="weatherFlip_time" type="number" class="form-control" min="0" placeholder="请输入">
+                    <span class="input-group-addon">秒</span>
+                </div>
+            </div>
+
+        </div>
+        <div id="box_tableHeader" class="box-header with-border">
+            <button type="button" class="btn btn-default btn-sm checkbox-toggle allCheck"><i class="fa fa-square-o"></i>
+            </button>
+            <div class="btn-group">
+            <button id="mtr_delete" type="button" class="btn btn-default btn-sm" disabled>删除</button>
+            <button id="mtr_batchOperation" type="button" class="btn btn-default btn-sm">批量编辑</button>
+            <button id="mtr_countTime" type="button" class="btn btn-default btn-sm">统计时长</button>
+            </div>
+            <button id="mtr_addMtr" type="button" class="btn btn-primary btn-sm" typeid="1">添加资源</button>
+            <div class="pull-right">
+                <div id="mtr_dplist" class="btn-group">
+                    <select id="mtrCtrl_playType" class="form-control select2"
+                            style="width: 100%; height: 30px; padding: 0px 10px;">
+                        <option selected="selected" value="Sequence">顺序播放</option>
+                        <option value="Random">随机播放</option>
+                        <option value="Percent">比例播放</option>
+                    </select>
+                </div>
+            </div>
+            <!-- /.box-tools -->
+        </div>
+        <div class="mtr_choise table-responsive" style=" margin-top: 10px; height: calc(100% - 150px); border: 1px solid #ddd; border-radius: 3px; width: calc(100% - 10px)">
+            <!-- 资源列表 -->
+            <table id="mtrCtrl_Table" class="table table-hover table-striped">
+                <thead></thead>
+                <tbody></tbody>
+            </table>
+            <!-- /.table -->
+            <!-- 时间控件类型 -->
+            <div id="box_datetime" style="display: none;">
+            	<div>
+                    <input id="mtrC_dtTime" type="radio" clockType="Time" name="r3" class="flat-red rd_clock" checked>
+
+                    <div class="info-box mtrC_datetime">
+                        <div class="info-box-content">
+                            <span class="info-box-number">00:00:00</span>
+                        </div>
+                        <!-- /.info-box-content -->
+                    </div>
+                </div>
+                <div>
+
+                    <input id="mtrC_dtDate" type="radio" clockType="Date" name="r3" class="flat-red rd_clock">
+
+                    <div class="info-box mtrC_datetime">
+                        <div class="info-box-content">
+                            <span class="info-box-number">2016-01-01</span>
+                        </div>
+                        <!-- /.info-box-content -->
+                    </div>
+                </div>
+
+                <!-- /.info-box -->
+                <div>
+                    <input id="mtrC_dtWeek" type="radio" clockType="Week" name="r3" class="flat-red rd_clock">
+
+                    <div class="info-box mtrC_datetime">
+                       
+                        <div class="info-box-content">
+                            <span class="info-box-number">星期一</span>
+                        </div>
+                        <!-- /.info-box-content -->
+                    </div>
+                    <!-- /.info-box -->
+                </div>
+                <div>
+                    <input id="mtrC_dtDateTime" type="radio" clockType="DateTime" name="r3" class="flat-red rd_clock">
+
+                    <div class="info-box mtrC_datetime">
+                        <div class="info-box-content">
+                            <span class="info-box-number">2016-01-01 00:00:00</span>
+                        </div>
+                        <!-- /.info-box-content -->
+                    </div>
+                    <!-- /.info-box -->
+                </div>
+                <div>
+                    <input id="mtrC_dtDateTimeWeekH" type="radio" clockType="DateTimeWeekH" name="r3" class="flat-red rd_clock">
+
+                    <div class="info-box mtrC_datetime">
+
+                        <div class="info-box-content">
+                            <span class="info-box-number">2016-01-01 00:00:00</span>
+                            <span class="info-box-number">星期一</span>
+                        </div>
+                        <!-- /.info-box-content -->
+                    </div>
+                    <!-- /.info-box -->
+                </div>
+                <div>
+                    <input id="mtrC_dtDateTimeWeekV" type="radio" clockType="DateTimeWeekV" name="r3" class="flat-red rd_clock">
+
+                    <div class="info-box mtrC_datetime">
+
+                        <div class="info-box-content">
+                            <span class="info-box-number">2016-01-01</span>
+                            <span class="info-box-number">00:00:00</span>
+                            <span class="info-box-number">星期一</span>
+                        </div>
+                        <!-- /.info-box-content -->
+                    </div>
+                    <!-- /.info-box -->
+                </div>
+                <div>
+                    <input id="mtrC_dtTimeAnim" type="radio" clockType="TimeAnim" name="r3" class="flat-red rd_clock">
+
+                    <div class="info-box mtrC_datetime">
+
+                        <div class="info-box-content">
+                            <span class="info-box-number" style="font-family: '华文细黑';"><span style="font-size: 32px;">00:00</span>00</span>
+                        </div>
+                        <!-- /.info-box-content -->
+                    </div>
+                    <!-- /.info-box -->
+                </div>
+            </div>
+
+            <!-- 天气控件 -->
+            <div id="box_weather" style="display: none;">
+                <div>
+                    <input id="mtrC_weatherNormal" type="radio" weatherType="Normal" name="r3" class="flat-red rd_weather" checked>
+
+                    <div id="mtrC_weatherNormal_box" class="info-box mtrC_weather">
+                        <div class="mtrC_weatherNormal_box_left"><img src="resources/img/img_weather_1.png"></div>
+                        <div class="mtrC_weatherNormal_box_middle">
+                            <span>多云</span>
+                            </br><span>无持续风向：微风</span>
+                            <h3>15°～28°</h3>
+                        </div>
+                        <div class="mtrC_weatherNormal_box_right">
+                            <h2>北京</h2>
+                            <span>今天</span>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <input id="mtrC_weatherOneline" type="radio" weatherType="oneline" name="r3" class="flat-red rd_weather" checked>
+
+                    <div id="mtrC_weatherOneline_box" class="info-box mtrC_weather">
+                        <div class="mtrC_weatherOneline_box_left"><img src="resources/img/img_weather_1.png"></div>
+                        <div class="mtrC_weatherNormal_box_right">
+                            <span>北京&nbsp;今天&nbsp;多云&nbsp;15°～28°</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- /.box-body -->
+        </div>
+    </form>
+</div>
+<!-- /.box -->
+
+<script>
+
+    seajs.use("pages/channel/mtrCtrl.js", function (mtrCtrl) {
+        mtrCtrl.init()
+    })
+</script>

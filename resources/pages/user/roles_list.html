@@ -1,0 +1,63 @@
+<!-- Content Header (Page header) -->
+<section class="content-header">
+    <h1>
+        角色权限
+    </h1>
+</section>
+
+<!-- Main content -->
+<section class="content">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="box box-primary">
+                <div class="box-header with-border">
+                    <button id="roles_add" type="button" class="btn btn-default btn-sm">创建新角色</button>
+                    <!-- /.box-tools -->
+                </div>
+                <!-- /.box-header -->
+                <!-- <div class="box-body no-padding"> -->
+                    <!-- <div class="mailbox-controls"> -->
+                       <!-- <h6 id="rolesLisTitle" class="box-title"></h6>                     -->
+                        
+                        <!-- <div class="btn-group"> -->
+                        <!-- </div> -->
+                        <!-- /.btn-group -->
+
+                        <!-- <div class="pull-right"> -->
+                        <!-- </div> -->
+                        <!-- /.pull-right -->
+                    <!-- </div> -->
+                    <div class="table-responsive mailbox-messages">
+                        <!-- 资源列表 -->
+                        <table id="rolesTable" class="table table-hover table-striped">
+                            <tbody>
+
+                            </tbody>
+                        </table>
+                        <!-- /.table -->
+                    </div>
+                    <!-- /.mail-box-messages -->
+                    
+                    <div class="box-footer no-padding text-center">
+                        <!-- 翻页 -->
+                        <ul id="roles-table-pager" class="pagination">
+                        </ul>
+                    </div>
+                </div>
+                <!-- /.box-body -->
+            </div>
+            <!-- /. box -->
+        </div>
+        <!-- /.col -->
+    </div>
+    <!-- /.row -->
+
+    <!-- upload按钮-->
+    <input id="file" name="file" type="file" multiple="multiple" accept="image/*, audio/*, video/*"/>
+</section>
+<!-- /.content -->
+<script>
+    seajs.use("pages/user/roles_list.js", function (rolesList) {
+        rolesList.init()
+    })
+</script>

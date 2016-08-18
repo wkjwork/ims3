@@ -1,0 +1,48 @@
+<section id="channel-list-nav" class="content-header row">
+	<h1>频道列表</h1>
+	<div class="input-group input-group-sm col-sm-2 search-container">
+		<input type="text" class="form-control">
+		<span class="input-group-btn">
+			<button type="button" class="btn btn-info btn-flat">搜索</button>
+		</span>
+	</div>
+</section>
+<section class="content">
+	<div class="box">
+		<!-- /.box-header -->
+		<div id="channel-list-controls">
+			<!-- Check all button -->
+			<button type="button" class="btn btn-default btn-sm checkbox-toggle select-all"><i class="fa fa-square-o"></i>
+			</button>
+			<div class="pull-right btn-group">
+				<button type="button" class="btn btn-default btn-flat btn-publish">发布</button>
+				<button type="button" class="btn btn-default btn-flat btn-publish-later">预发布</button>
+				<button type="button" class="btn btn-default btn-flat btn-copy">复制</button>
+				<button type="button" class="btn btn-default btn-flat btn-delete">删除</button>
+			</div>
+		</div>
+		<div class="table-responsive">
+			<table id="channel-table" class="table table-hover table-striped">
+				<tbody>
+				</tbody>
+			</table>
+		</div>
+
+    <div class="text-center">
+			<ul id="channel-table-pager" class="pagination">
+			</ul>
+    </div>
+	</div>
+</section>
+<!-- icheck -->
+<link rel="stylesheet" href="resources/plugins/iCheck/all.css"/>
+<link rel="stylesheet" href="resources/css/pages/channel/list.css"/>
+<script src="resources/plugins/iCheck/icheck.min.js"></script>
+<script src="resources/plugins/jqPaginator/jqPaginator.min.js"></script>
+<!--<script src="resources/plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="resources/plugins/datatables/dataTables.bootstrap.min.js"></script>-->
+<script>
+	seajs.use('pages/channel/list', function(channelList) {
+		channelList.init();
+	});
+</script>
